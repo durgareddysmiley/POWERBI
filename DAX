@@ -2,3 +2,119 @@ IF WE WANT TO CREATE NEW TABLE THEN GO TO MODELLING
 --> NEW TABLE 
 IN FORMULA BAR WRITE LIKE 
 CALENDAR = CALENDARAUTO() THEN IT IS CREATED RIGHT SIDE IIN THE TABLES TAB
+
+TO CREATE COLUMN 
+HERE IF YOUR DATA CONSISTS OF DATE THEN YOU NEED TO CREATE A DATE TABLE TO MAKE WORK EASY 
+
+NOW INSTEAD OF CREATE TABLE GO TO CREATE COLUMN THEN YOU CAN CLICK CREATE COLUMN 
+📅 Date Table in Power BI (CALENDARAUTO vs CALENDAR)
+Why Date Table?
+
+If your data contains date columns, creating a Date Table makes:
+
+Filtering easy
+
+Time intelligence (YTD, MTD, YoY) work properly
+
+Relationships clean and correct
+
+🟢 Method 1: Using CALENDARAUTO()
+Steps
+
+Go to Modeling
+
+Click New Table
+
+Write in formula bar:
+
+Calendar = CALENDARAUTO()
+
+
+✅ A new table named Calendar will be created
+✅ It appears on the right side in Tables pane
+
+How CALENDARAUTO() Works
+
+Automatically scans all date columns in the model
+
+Finds the earliest and latest date
+
+Creates a continuous date table
+
+📌 No need to mention start date and end date
+
+When to Use CALENDARAUTO()
+
+✔ Small or medium datasets
+✔ Quick setup
+✔ When all date columns are reliable
+
+⚠️ Not recommended if:
+
+Your model has unwanted date columns
+
+You need full control on date range
+
+🟢 Method 2: Using CALENDAR()
+Steps
+
+Go to Modeling
+
+Click New Table
+
+Write:
+
+Calendar =
+CALENDAR(
+    MIN(Data[Accident_Date]),
+    MAX(Data[Accident_Date])
+)
+
+How CALENDAR() Works
+
+You manually define start and end date
+
+Uses only the required date column
+
+Creates date rows from MIN date to MAX date
+
+When to Use CALENDAR()
+
+✔ Large datasets
+✔ Production reports
+✔ Full control over date range
+
+🟡 Creating Date Columns (Derived Columns)
+
+After creating Date Table, you can add columns:
+
+Year
+Year = YEAR(Calendar[Date])
+
+Month Number
+Month No = MONTH(Calendar[Date])
+
+Month Name
+Month Name = FORMAT(Calendar[Date], "MMMM")
+
+🔗 Important Final Step
+
+Mark Calendar as Date Table
+
+Create relationship:
+
+Calendar[Date] → Data[Accident_Date]
+
+🧠 Interview One-Line Answer
+
+A Date Table helps Power BI perform accurate time intelligence calculations and proper date filtering.
+
+If you want, I can:
+
+Rewrite this in even simpler English
+
+Convert it into LinkedIn post
+
+Add interview Q&A section
+
+Just tell me 👍
