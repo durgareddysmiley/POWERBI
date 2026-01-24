@@ -1,0 +1,138 @@
+📌 1️⃣ Requirement Gathering / Business Requirement
+
+👉 Understanding what the client wants
+
+What problem to solve?
+
+What KPIs are needed?
+
+Who will use the dashboard?
+
+🧠 Example:
+Hospital wants to track waiting time, patient count, satisfaction.
+
+📌 2️⃣ Data Walkthrough
+
+👉 Understanding the data structure
+
+What columns are there?
+
+Meaning of each column
+
+Data type (date, number, text)
+
+🧠 Example:
+Patient ID, Arrival Time, Gender, Department, etc.
+
+📌 3️⃣ Data Connection
+
+👉 Connecting Power BI to data source
+
+Excel
+
+CSV
+
+Database
+
+SQL Server
+
+🧠 Example:
+Connecting ER patient CSV file to Power BI.
+
+📌 4️⃣ Data Cleaning / Quality Check
+
+👉 Fixing wrong or missing data
+
+Remove duplicates
+
+Handle missing values
+
+Correct formats
+
+🧠 Example:
+Fix wrong dates, remove empty patient IDs.
+
+📌 5️⃣ Data Modeling
+
+👉 Creating relationships between tables
+
+One-to-many relations
+
+Primary & foreign keys
+
+🧠 Example:
+Link Patient table with Date table.
+
+📌 6️⃣ Data Processing
+
+👉 Transforming data for analysis
+
+Create new columns
+
+Group data
+
+Filter data
+
+🧠 Example:
+Create Age Group from Age.
+
+📌 7️⃣ DAX Calculations
+
+👉 Writing formulas to calculate KPIs
+
+Measures
+
+Calculated columns
+
+🧠 Example:
+Average Wait Time, % Seen within 30 mins.
+
+📌 8️⃣ Dashboard Layouting
+
+👉 Designing dashboard structure
+
+Where charts go
+
+Card positions
+
+Filters placement
+
+🧠 Example:
+KPIs on top, charts below.
+
+📌 9️⃣ Charts Development & Formatting
+
+👉 Creating and styling charts
+
+Bar, pie, line charts
+
+Colors, labels, fonts
+
+🧠 Example:
+Bar chart for patients by day.
+
+📌 🔟 Dashboard / Report Development
+
+👉 Building the final interactive dashboard
+
+Slicers
+
+Tooltips
+
+Navigation buttons
+
+🧠 Example:
+Monthly view & consolidated view pages.
+
+📌 1️⃣1️⃣ Insights Generation
+
+👉 Finding meaningful conclusions from data
+
+Trends
+
+Problems
+
+Improvements
+
+🧠 Example:
+Waiting time is higher on Thursdays.
