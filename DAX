@@ -97,6 +97,57 @@ Month No = MONTH(Calendar[Date])
 Month Name
 Month Name = FORMAT(Calendar[Date], "MMMM")
 
+## What is the use of FORMAT in Power BI?
+
+In Power BI, FORMAT is a DAX function used to change how a value looks (display format) without changing the actual value.
+
+👉 It converts numbers or dates into text with a specific format.
+
+Syntax
+FORMAT(value, format_string)
+
+
+value → number / date / expression
+
+format_string → how you want it to appear
+
+Common Uses of FORMAT
+1️⃣ Format Numbers
+
+Example: Show number with 2 decimals
+
+FORMAT(1234.567, "0.00")
+
+
+➡️ Output: 1234.57
+
+Example: Thousand separator
+
+FORMAT(1234567, "#,##0")
+
+
+➡️ Output: 1,234,567
+
+2️⃣ Format Currency 💰
+FORMAT(2500, "₹#,##0")
+
+
+➡️ Output: ₹2,500
+
+(You can also use $, €, etc.)
+
+3️⃣ Format Percentages
+FORMAT(0.85, "0%")
+
+
+➡️ Output: 85%
+
+4️⃣ Format Dates 📅
+FORMAT(TODAY(), "dd-MM-yyyy")
+
+
+➡️ Output: 29-01-2026
+
 🔗 Important Final Step
 
 Mark Calendar as Date Table
@@ -105,6 +156,26 @@ Create relationship:
 
 Calendar[Date] → Data[Accident_Date]
 
+##TO COMBINE BOTH
+Formula
+GPS =
+FORMAT([Latitude], "0.000000")
+& ", "
+& FORMAT([Longitude], "0.000000")
+
+What is mixing
+
+[Latitude] → number
+
+", " → text
+
+`[Longitude] → number
+
+After FORMAT() → all become TEXT
+Joined using &
+
+Output
+17.385044, 78.486671
 🧠 Interview One-Line Answer
 
 A Date Table helps Power BI perform accurate time intelligence calculations and proper date filtering.
