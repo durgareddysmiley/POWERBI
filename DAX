@@ -189,3 +189,34 @@ Convert it into LinkedIn post
 Add interview Q&A section
 
 Just tell me 👍
+
+## CALCULATE FORMULA
+what is CALCULATE?
+
+👉 CALCULATE changes the filter conditions and then calculates a value.
+
+CALCULATE(
+    COUNTROWS('Hospital ER_Data'),
+    'Hospital ER_Data'[Department Referral] <> "None"
+)
+Read it like English 👇
+
+Count rows
+ONLY WHERE
+Department Referral is NOT "None"
+
+Input → Output example
+
+Data
+
+Row 1 → Cardiology
+Row 2 → None
+Row 3 → Neurology
+
+
+Result
+
+2
+
+
+(because only 2 rows are not "None")
